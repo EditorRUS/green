@@ -1,7 +1,7 @@
 //This file was auto-corrected by findeclaration.exe on 25.5.2012 20:42:32
 
 #define HUMAN_MAX_OXYLOSS 6 //Defines how much oxyloss humans can get per tick. No air applies this value.
-
+#define ЛОХ_ПИДР 6
 /mob/living/carbon/human
 	var/oxygen_alert = 0
 	var/toxins_alert = 0
@@ -268,14 +268,14 @@
 				if ((prob(5) && paralysis <= 1 && r_ch_cou < 1))
 					drop_item()
 					spawn( 0 )
-						emote("custom hêàøëÿåò")
+						emote("custom hГЄГ ГёГ«ГїГҐГІ")
 			if (disabilities & 8)
 				if ((prob(5) && paralysis <= 1 && r_Tourette < 1))
 					Stun(10)
 					spawn(0)
 						switch(rand(1, 3))
 							if(1)
-								emote("custom väåðãàåòñÿ")
+								emote("custom vГ¤ГҐГ°ГЈГ ГҐГІГ±Гї")
 							if(2 to 3)
 								say("[prob(50) ? ";" : ""][pick("EELS","MOTORBOATS","MERDE","ANTIDISESTABLISHMENTARIANISM","OGOPOGO","POPEMOBILE","RHOMBUS","TUMESCENCE","ZIGGURAT","DIRIGIBLES","WAFFLES","PICKLES","BIKINI","DUCK","KNICKERBOCKERS","LOQUACIOUS","MACADAMIA","MAHOGANY","KUMQUAT","PERCOLATOR","AUBERGINES","FLANGES","GOURDS","DONUTS","CALLIPYGIAN","DARJEELING","DWARFS","MAGMA","ARMOK","BERR","APPLES","SPACEMEN","NINJAS","PIRATES","BUNION")]!")
 						var/old_x = pixel_x
@@ -293,11 +293,11 @@
 				if (prob(7))
 					switch(pick(1,2,3))
 						if(1)
-							say(sanitize(pick("Òâàþ ìàìó èáàë!", "ß íå ñìàëãåé!", "ÕÎÑ ÕÓÅÑÎÑ!", "[pick("", "åáó÷èé òðåéòîð")] [pick("ìîðãàí", "ìîðãóí", "ìîðãåí", "ìðîãóí")] [pick("äæåìåñ", "äæàìåñ", "äæàåìåñ")] ãðåôîíåò ìèíÿ øïàñèò;å!!!", "òè ìîæûø äàòü ìíå [pick("òèëèïàòèþ","õàëêó","ýïèëëåïñèþ")]?", "ÕÀ÷ó ñòàòü áîðãîì!", "ÏÎÇÎâèòå äåòåêòèâà!", "Õî÷ó ñòàòü ìàðòûøêîé!", "ÕÂÀÒÅÒ ÃÐÈÔÎÍÅÒÜ ÌÈÍß!!!!", "ØÒÀÏ!")))
+							say(sanitize(pick("Г’ГўГ Гѕ Г¬Г Г¬Гі ГЁГЎГ Г«!", "Гџ Г­ГҐ Г±Г¬Г Г«ГЈГҐГ©!", "Г•ГЋГ‘ Г•Г“Г…Г‘ГЋГ‘!", "[pick("", "ГҐГЎГіГ·ГЁГ© ГІГ°ГҐГ©ГІГ®Г°")] [pick("Г¬Г®Г°ГЈГ Г­", "Г¬Г®Г°ГЈГіГ­", "Г¬Г®Г°ГЈГҐГ­", "Г¬Г°Г®ГЈГіГ­")] [pick("Г¤Г¦ГҐГ¬ГҐГ±", "Г¤Г¦Г Г¬ГҐГ±", "Г¤Г¦Г ГҐГ¬ГҐГ±")] ГЈГ°ГҐГґГ®Г­ГҐГІ Г¬ГЁГ­Гї ГёГЇГ Г±ГЁГІ;ГҐ!!!", "ГІГЁ Г¬Г®Г¦Г»Гё Г¤Г ГІГј Г¬Г­ГҐ [pick("ГІГЁГ«ГЁГЇГ ГІГЁГѕ","ГµГ Г«ГЄГі","ГЅГЇГЁГ«Г«ГҐГЇГ±ГЁГѕ")]?", "Г•ГЂГ·Гі Г±ГІГ ГІГј ГЎГ®Г°ГЈГ®Г¬!", "ГЏГЋГ‡ГЋГўГЁГІГҐ Г¤ГҐГІГҐГЄГІГЁГўГ !", "Г•Г®Г·Гі Г±ГІГ ГІГј Г¬Г Г°ГІГ»ГёГЄГ®Г©!", "Г•Г‚ГЂГ’Г…Г’ ГѓГђГ€Г”ГЋГЌГ…Г’Гњ ГЊГ€ГЌГџ!!!!", "Г�Г’ГЂГЏ!")))
 						if(2)
-							say(sanitize(pick("Êàê ìèíÿòü ðóêè?","åáó÷èå ôóððè!", "Ïîäåáèë", "Ïðîêëÿòûå òðàïû!", "Ýòî æè ãðèí!", "âæææææææææ!!!", "äæåô ñêâààààä!", "ÁÐÀÍÄÅÍÁÓÐÃ!", "ÁÓÄÀÏÅØÒ!", "ÏÀÓÓÓÓÓÊ!!!!", "ÏÓÊÀÍ ÁÎÌÁÀÍÓË!", "ÏÓØÊÀ", "ÐÅÂÀ ÏÎÖÎÍÛ", "Ïàòè íà õîïà!")))
+							say(sanitize(pick("ГЉГ ГЄ Г¬ГЁГ­ГїГІГј Г°ГіГЄГЁ?","ГҐГЎГіГ·ГЁГҐ ГґГіГ°Г°ГЁ!", "ГЏГ®Г¤ГҐГЎГЁГ«", "ГЏГ°Г®ГЄГ«ГїГІГ»ГҐ ГІГ°Г ГЇГ»!", "ГќГІГ® Г¦ГЁ ГЈГ°ГЁГ­!", "ГўГ¦Г¦Г¦Г¦Г¦Г¦Г¦Г¦Г¦!!!", "Г¤Г¦ГҐГґ Г±ГЄГўГ Г Г Г Г¤!", "ГЃГђГЂГЌГ„Г…ГЌГЃГ“ГђГѓ!", "ГЃГ“Г„ГЂГЏГ…Г�Г’!", "ГЏГЂГ“Г“Г“Г“Г“ГЉ!!!!", "ГЏГ“ГЉГЂГЌ ГЃГЋГЊГЃГЂГЌГ“Г‹!", "ГЏГ“Г�ГЉГЂ", "ГђГ…Г‚ГЂ ГЏГЋГ–ГЋГЌГ›", "ГЏГ ГІГЁ Г­Г  ГµГ®ГЇГ !")))
 						if(3)
-							emote("custom vïóñêàåò ñëþíè")
+							emote("custom vГЇГіГ±ГЄГ ГҐГІ Г±Г«ГѕГ­ГЁ")
 
 
 		handle_mutations_and_radiation()
